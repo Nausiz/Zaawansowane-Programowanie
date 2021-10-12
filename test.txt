@@ -1,3 +1,4 @@
 Przykładowy tekst
 
 Zmiana do commita 1
+Zmiana do commita 2
