@@ -1,11 +1,10 @@
 # Zadanie 1
-name = "Martyna"
-surname = "Jurczak"
 
-def say_hello(name: str,surname: str) -> str:
+def say_hello(name: str, surname: str) -> str:
     return f'Cześć {name} {surname}!'
 
-text = say_hello(name, surname)
+
+text = say_hello("Martyna", "Jurczak")
 print(text)
 
 
@@ -13,12 +12,14 @@ print(text)
 def multiplication(a: int, b: int) -> int:
     return a*b
 
+
 print(multiplication(3, 4))
 
 
 # Zadanie 3
 def isEvenNumber(a: int) -> bool:
-    return a%2==0
+    return a % 2 == 0
+
 
 isEven = isEvenNumber(3)
 
@@ -32,29 +33,32 @@ else:
 def isSumGreater(a: int, b: int, c: int) -> bool:
     return a + b >= c
 
+
 print(isSumGreater(3, 4, 2))
 print(isSumGreater(3, 4, 10))
 
 
 # Zadanie 5
-def isThere(list: list, a: int) -> bool:
-    for number in list:
-        if number==a:
+def isThere(list_numbers: list, a: int) -> bool:
+    for number in list_numbers:
+        if number == a:
             return True
     return False
 
-list = [1, 2, 3, 4, 5]
-print(isThere(list, 3))
-print(isThere(list, 6))
+
+list_numbers = [1, 2, 3, 4, 5]
+print(isThere(list_numbers, 3))
+print(isThere(list_numbers, 6))
 
 
 # Zadanie 6
-def mergeLists(listA: list, listB: list) -> list:
-    list = []
-    for number in listA + listB:
-        if number not in list:
-            list.append(number**3)
-    return list
+def mergeLists(list1: list, list2: list) -> list:
+    list_merged = []
+    for number in list1 + list2:
+        if number not in list_merged:
+            list_merged.append(number**3)
+    return list_merged
+
 
 listA = [1, 2, 3, 3, 4]
 listB = [3, 4, 5, 6, 7]
