@@ -1,5 +1,3 @@
-#Zadanie 1
-
 class Student:
     def __init__(self, name: str, marks: int):
         self.name = name
@@ -11,6 +9,7 @@ class Student:
     def is_passed(self) -> bool:
         return self.marks > 50
 
+
 first_Student = Student("Daniel", 60)
 second_Student = Student("Karol", 40)
 
@@ -19,7 +18,6 @@ print(first_Student.is_passed())
 print(second_Student.is_passed())
 
 
-#Zadanie 2
 class Library:
     def __init__(self, city: str, street: str, zip_code: str, open_hours: str, phone: str):
         self.city = city
@@ -31,6 +29,7 @@ class Library:
     def __str__(self):
         return f"Biblioteka w {self.city} na ulicy {self.street}; Kod pocztowy: {self.zip_code}. " \
                f"Otwarta w godzinach: {self.open_hours}. Numer telefonu: {self.phone}"
+
 
 class Employee:
     def __init__(self, first_name: str, last_name: str, hire_date: str, birth_date: str,
@@ -51,6 +50,7 @@ class Employee:
                f"Adres: {self.city} {self.street}, {self.zip_code}," \
                f"Numer telefonu: {self.phone}"
 
+
 class Order:
     def __init__(self, employee: Employee, student: Student, books: list, order_date: str):
         self.employee = employee
@@ -59,18 +59,20 @@ class Order:
         self.order_date = order_date
 
     def __str__(self):
-        bookInfo = ""
+        bookinf = ""
         for book in self.books:
-            bookInfo += str(book) + " "
+            bookinf += str(book) + " "
 
         return f"Informacje o zamówieniu: " \
                f"{self.employee};" \
                f"{self.student};" \
-               f"{bookInfo}" \
+               f"{bookinf}" \
                f"Data zamówienia: {self.order_date}"
 
+
 class Book:
-    def __init__(self, library: Library, publication_date: str, author_name: str, author_surname: str, number_of_pages: int):
+    def __init__(self, library: Library, publication_date: str, author_name: str,
+                 author_surname: str, number_of_pages: int):
         self.library = library
         self.publication_date = publication_date
         self.author_name = author_name
@@ -83,6 +85,7 @@ class Book:
                f"Autor: {self.author_name} {self.author_surname};" \
                f"Liczba stron: {str(self.number_of_pages)}"
 
+
 library1 = Library("Katowice", "Mickiewicza 12", "40-600", "8:00-17:00", "600700444")
 library2 = Library("Mysłowice", "Sienkiewicza 7", "43-600", "9:00-18:30", "700600888")
 
@@ -92,9 +95,12 @@ book3 = Book(library1, "11.06.12", "Marek", "Konieczny", 434)
 book4 = Book(library2, "06.04.02", "Jacek", "Marchewka", 150)
 book5 = Book(library1, "23.10.00", "Agata", "Kwiatkowska", 231)
 
-employee1 = Employee("Martyna", "Malinowska", "03.04.20", "12.02.99", "Katowice", "3 Maja 17", "40-700", "555666777")
-employee2 = Employee("Łukasz", "Kowalski", "15.07.12", "15.12.99", "Gliwice", "Polna 4", "42-722", "666777888")
-employee3 = Employee("Antoni", "Słoikowski", "02.01.18", "12.02.95", "Tychy", "Gierałtowskiego 5", "41-700", "777888999")
+employee1 = Employee("Martyna", "Malinowska", "03.04.20", "12.02.99",
+                     "Katowice", "3 Maja 17", "40-700", "555666777")
+employee2 = Employee("Łukasz", "Kowalski", "15.07.12", "15.12.99",
+                     "Gliwice", "Polna 4", "42-722", "666777888")
+employee3 = Employee("Antoni", "Słoikowski", "02.01.18", "12.02.95",
+                     "Tychy", "Gierałtowskiego 5", "41-700", "777888999")
 
 student1 = Student("Krystyna", 78)
 student2 = Student("Magdalena", 49)
@@ -108,7 +114,6 @@ print(order1)
 print(order2)
 
 
-#Zadanie 3
 class Property:
     def __init__(self, area: str, rooms: int, price: int, address: str):
         self.area = area
@@ -123,7 +128,9 @@ class House(Property):
         self.plot = plot
 
     def __str__(self):
-        return f"Okolica: {self.area}; Pokoje: {self.rooms}; Cena: {self.price}; Adres: {self.address}; Rozmiar działki: {self.plot}"
+        return f"Okolica: {self.area}; Pokoje: {self.rooms}; Cena: {self.price}; " \
+               f"Adres: {self.address}; Rozmiar działki: {self.plot}"
+
 
 class Flat(Property):
     def __init__(self, area: str, rooms: int, price: int, address: str, floor: int):
@@ -131,7 +138,9 @@ class Flat(Property):
         self.floor = floor
 
     def __str__(self):
-        return f"Okolica: {self.area}; Pokoje: {self.rooms}; Cena: {self.price}; Adres: {self.address}; Piętro: {self.floor}"
+        return f"Okolica: {self.area}; Pokoje: {self.rooms}; Cena: {self.price};" \
+               f" Adres: {self.address}; Piętro: {self.floor}"
+
 
 house = House("Wieś", 7, 340000, "Mała Wieś 123 41-500", 1400)
 flat = Flat("Miasto", 4, 210000, "Katowice 3 Maja 2 41-500", 120)
