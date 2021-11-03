@@ -1,5 +1,4 @@
 # Zadanie 1
-
 def say_hello(name: str, surname: str) -> str:
     return f'Cześć {name} {surname}!'
 
@@ -17,11 +16,11 @@ print(multiplication(3, 4))
 
 
 # Zadanie 3
-def isEvenNumber(a: int) -> bool:
+def is_even_number(a: int) -> bool:
     return a % 2 == 0
 
 
-isEven = isEvenNumber(3)
+isEven = is_even_number(3)
 
 if isEven:
     print("Liczba parzysta")
@@ -30,29 +29,29 @@ else:
 
 
 # Zadanie 4
-def isSumGreater(a: int, b: int, c: int) -> bool:
+def is_sum_greater(a: int, b: int, c: int) -> bool:
     return a + b >= c
 
 
-print(isSumGreater(3, 4, 2))
-print(isSumGreater(3, 4, 10))
+print(is_sum_greater(3, 4, 2))
+print(is_sum_greater(3, 4, 10))
 
 
 # Zadanie 5
-def isThere(list_numbers: list, a: int) -> bool:
-    for number in list_numbers:
+def is_there(list_num: list, a: int) -> bool:
+    for number in list_num:
         if number == a:
             return True
     return False
 
 
 list_numbers = [1, 2, 3, 4, 5]
-print(isThere(list_numbers, 3))
-print(isThere(list_numbers, 6))
+print(is_there(list_numbers, 3))
+print(is_there(list_numbers, 6))
 
 
 # Zadanie 6
-def mergeLists(list1: list, list2: list) -> list:
+def merge_lists(list1: list, list2: list) -> list:
     list_merged = []
     for number in list1 + list2:
         if number not in list_merged:
@@ -62,4 +61,4 @@ def mergeLists(list1: list, list2: list) -> list:
 
 listA = [1, 2, 3, 3, 4]
 listB = [3, 4, 5, 6, 7]
-print(mergeLists(listA, listB))
+print(merge_lists(listA, listB))
