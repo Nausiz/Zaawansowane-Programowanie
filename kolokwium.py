@@ -5,10 +5,6 @@ class Firma:
         self._region = region
         self._branza = branza
 
-    def __str__(self):
-        return f"Nazwa firmy: {self._nazwa}; Ilość pracowników: {self._ilosc_pracownikow};" \
-               f" Region: {self._region}; Branża: {self._branza}"
-
     @property
     def nazwa(self) -> str:
         return self._nazwa
@@ -32,7 +28,9 @@ class FirmaTransportowa(Firma):
         self._ile_przewozow_rocznie = ile_przewozow_rocznie
 
     def __str__(self):
-        return f"Dane firmy: {Firma}; Ilość rocznych przewozów: {self._ile_przewozow_rocznie}"
+        return f"Nazwa firmy: {self._nazwa}; Ilość pracowników: {self._ilosc_pracownikow};" \
+               f" Region: {self._region}; Branża: {self._branza};" \
+               f" Ilość rocznych przewozów: {self._ile_przewozow_rocznie}"
 
     @property
     def ile_przewozow_rocznie(self) -> int:
@@ -45,7 +43,8 @@ class FirmaSpozyczwa(Firma):
         self._produkt = produkt
 
     def __str__(self):
-        return f"Dane firmy: {Firma}; Produkt: {self._produkt}"
+        return f"Nazwa firmy: {self._nazwa}; Ilość pracowników: {self._ilosc_pracownikow};" \
+               f" Region: {self._region}; Branża: {self._branza}; Produkt: {self._produkt}"
 
     @property
     def produkt(self) -> str:
