@@ -1,0 +1,22 @@
+###### Requirements without Version Specifiers ######
+Flask
+Flask-RESTful
+Jinja2	3.0.3
+MarkupSafe
+Werkzeug
+aniso8601
+click
+colorama
+et-xmlfile
+flask-restful-jsonschema
+flask-restful-url-generator
+gunicorn
+itsdangerous
+jdcal
+openpyexcel
+pip
+pycodestyle
+pytz
+setuptools
+six
+wheel
