@@ -18,5 +18,6 @@ def detector(frame):
         c += 1
 
     cv2.putText(frame, f'Total Persons : {c - 1}', (20, 450), cv2.FONT_HERSHEY_DUPLEX, 0.8, (255, 255, 255), 2)
+    print(f'Total Persons : {c - 1}')
     cv2.imshow('output', frame)
     return frame
